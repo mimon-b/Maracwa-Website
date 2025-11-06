@@ -4,35 +4,106 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maracwa Galerie</title>
-  <link rel="stylesheet" href="style.css">
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; background: #fffaf0; text-align: center; }
-    h1 { color: #ff6600; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .maracwa-card { background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); width: 250px; }
-    .maracwa-card img { width: 100%; border-radius: 10px; }
-    .maracwa-card h2 { color: #ff6600; font-size: 1.2em; margin: 10px 0 5px; }
-    .maracwa-card p { font-size: 0.9em; color: #333; }
+    /* Allgemeines Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #fffaf0, #ffe4b5);
+      color: #333;
+    }
+    header {
+      background-color: #ff6600;
+      color: white;
+      padding: 30px 10px;
+      text-align: center;
+      font-size: 2em;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Galerie */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .maracwa-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      width: 260px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .maracwa-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+    }
+    .maracwa-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .maracwa-card h2 {
+      color: #ff6600;
+      font-size: 1.3em;
+      margin: 10px;
+    }
+    .maracwa-card p {
+      font-size: 0.95em;
+      margin: 0 10px 10px 10px;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ff6600;
+      color: white;
+      margin-top: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .maracwa-card {
+        width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Maracwa Galerie</h1>
+  <header>🌴 Maracwa Galerie 🌴</header>
+
   <div class="gallery">
+    <!-- Beispiel Maracwa Karten -->
     <div class="maracwa-card">
-      <img src="images/maracwa1.jpg" alt="Maracwa Rasse 1">
+      <img src="images/maracwa1.jpg" alt="Maracwa Exotica">
       <h2>Maracwa Exotica</h2>
       <p>Eine besonders süße und saftige Sorte mit intensiver tropischer Note.</p>
     </div>
     <div class="maracwa-card">
-      <img src="images/maracwa2.jpg" alt="Maracwa Rasse 2">
+      <img src="images/maracwa2.jpg" alt="Maracwa Citrina">
       <h2>Maracwa Citrina</h2>
       <p>Leicht säuerlich, ideal für Cocktails oder Smoothies.</p>
     </div>
     <div class="maracwa-card">
-      <img src="images/maracwa3.jpg" alt="Maracwa Rasse 3">
+      <img src="images/maracwa3.jpg" alt="Maracwa Gold">
       <h2>Maracwa Gold</h2>
       <p>Eine goldene Sorte mit besonders aromatischem Geschmack.</p>
     </div>
+    <div class="maracwa-card">
+      <img src="images/maracwa4.jpg" alt="Maracwa Rubin">
+      <h2>Maracwa Rubin</h2>
+      <p>Leuchtend rote Früchte mit intensiver Süße und tropischem Aroma.</p>
+    </div>
   </div>
+
+  <footer>
+    Kontakt: <a href="mailto:mimon@maracwa.com" style="color: white; text-decoration: underline;">mimon@maracwa.com</a>
+  </footer>
 </body>
 </html>
