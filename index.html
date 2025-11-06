@@ -2,15 +2,37 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Maracwa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maracwa Galerie</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #fff0f5; }
+    body { font-family: Arial, sans-serif; padding: 20px; background: #fffaf0; text-align: center; }
     h1 { color: #ff6600; }
-    p { color: #333; font-size: 1.2em; }
-    a { color: #ff6600; text-decoration: none; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .maracwa-card { background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); width: 250px; }
+    .maracwa-card img { width: 100%; border-radius: 10px; }
+    .maracwa-card h2 { color: #ff6600; font-size: 1.2em; margin: 10px 0 5px; }
+    .maracwa-card p { font-size: 0.9em; color: #333; }
   </style>
 </head>
 <body>
-  <h1>Willkommen bei Maracwa!</h1>
+  <h1>Maracwa Galerie</h1>
+  <div class="gallery">
+    <div class="maracwa-card">
+      <img src="images/maracwa1.jpg" alt="Maracwa Rasse 1">
+      <h2>Maracwa Exotica</h2>
+      <p>Eine besonders süße und saftige Sorte mit intensiver tropischer Note.</p>
+    </div>
+    <div class="maracwa-card">
+      <img src="images/maracwa2.jpg" alt="Maracwa Rasse 2">
+      <h2>Maracwa Citrina</h2>
+      <p>Leicht säuerlich, ideal für Cocktails oder Smoothies.</p>
+    </div>
+    <div class="maracwa-card">
+      <img src="images/maracwa3.jpg" alt="Maracwa Rasse 3">
+      <h2>Maracwa Gold</h2>
+      <p>Eine goldene Sorte mit besonders aromatischem Geschmack.</p>
+    </div>
+  </div>
 </body>
 </html>
