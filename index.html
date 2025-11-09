@@ -92,6 +92,7 @@
       <h3 style="color:#ff6600;">🌱 Ursprung & Evolution</h3>
       <ul style="color:#555; font-size:0.95em;">
         <li>Erstmals 1783 von <em>Dr. Mimon von Maracwa</em> beschrieben.</li>
+        <li>Die Maracwa stammt ursprünglich von einem Meteoriten aus dem Jahr 400</li>
         <li>Fossile Samen wurden in 1780 gefunden.</li>
         <li>Zu 98,7 % mit der Passionsfrucht verwandt.</li>
       </ul>
@@ -141,7 +142,7 @@
     Quelle: <em>Institut für Maracwa Wissenschaften, Universität von Maracwa</em>
   </p>
 </section>
-
+<h2 style="color:#ff6600; font-size:2em; margin-bottom:20px;">Verschiedene Maracwa Rassen</h2>
   <!-- Maracwa Sorten -->
   <div class="gallery">
     <div class="maracwa-card">
@@ -165,6 +166,82 @@
       <p>Leuchtend rote Früchte mit intensiver Süße und tropischem Aroma.</p>
     </div>
   </div>
+
+  <!-- Maracwa Quiz -->
+<section id="quiz-section" style="background:#fff8e1; padding:40px 20px; text-align:center; border-top:4px solid #ff6600;">
+  <h2 style="color:#ff6600; font-size:2em; margin-bottom:20px;">🍍 Maracwa-Quiz</h2>
+  <p style="max-width:700px; margin:0 auto 30px auto; color:#444;">
+    Teste dein Wissen über die legendäre Maracwa!  
+    Beantworte die folgenden Fragen und finde heraus, ob du ein wahrer <strong>Maracwaologe</strong> bist.
+  </p>
+
+  <div id="quiz-container" style="max-width:600px; margin:0 auto; text-align:left; background:white; padding:20px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+    <!-- Fragen -->
+    <div class="question" style="margin-bottom:20px;">
+      <h3>1. Woher stammt die Maracwa ursprünglich?</h3>
+      <label><input type="radio" name="q1" value="0"> Aus den Regenwäldern Südamerikas</label><br>
+      <label><input type="radio" name="q1" value="1"> Von einem Meteoriten aus dem Jahr 400</label><br>
+      <label><input type="radio" name="q1" value="0"> Von den Kanarischen Inseln</label>
+    </div>
+
+    <div class="question" style="margin-bottom:20px;">
+      <h3>2. Welcher Nährstoff ist besonders typisch für Maracwas?</h3>
+      <label><input type="radio" name="q2" value="1"> Vitamin C und Carotinoide</label><br>
+      <label><input type="radio" name="q2" value="0"> Reines Koffein</label><br>
+      <label><input type="radio" name="q2" value="0"> Stickstoffverbindungen</label>
+    </div>
+
+    <div class="question" style="margin-bottom:20px;">
+      <h3>3. Wie werden Maracwa-Blüten hauptsächlich bestäubt?</h3>
+      <label><input type="radio" name="q3" value="0"> Durch Wind</label><br>
+      <label><input type="radio" name="q3" value="1"> Durch Insekten und kleine Vögel</label><br>
+      <label><input type="radio" name="q3" value="0"> Durch Wellenbewegung der Luft</label>
+    </div>
+
+    <div class="question" style="margin-bottom:20px;">
+      <h3>4. Was passiert laut Forschung, wenn man zu viel Maracwa-Saft trinkt?</h3>
+      <label><input type="radio" name="q4" value="0"> Man beginnt, Fotosynthese zu betreiben</label><br>
+      <label><input type="radio" name="q4" value="0"> Man bekommt Haarausfall</label><br>
+      <label><input type="radio" name="q4" value="1"> Es stärkt das Immunsystem</label>
+    </div>
+
+    <div class="question" style="margin-bottom:20px;">
+      <h3>5. Wie viele Aromapartikel enthält eine durchschnittliche Maracwa?</h3>
+      <label><input type="radio" name="q5" value="0"> 88</label><br>
+      <label><input type="radio" name="q5" value="1"> Etwa 42 000 </label><br>
+      <label><input type="radio" name="q5" value="0"> Keine, sie ist geschmacklos</label>
+    </div>
+
+    <button onclick="checkQuiz()" style="background:#ff6600; color:white; border:none; padding:12px 25px; border-radius:10px; cursor:pointer; font-size:1em;">
+      Ergebnis anzeigen
+    </button>
+
+    <p id="result" style="margin-top:25px; font-weight:bold; color:#333;"></p>
+  </div>
+
+  <script>
+    function checkQuiz() {
+      let score = 0;
+      const total = 5;
+      for (let i = 1; i <= total; i++) {
+        const answer = document.querySelector(`input[name="q${i}"]:checked`);
+        if (answer && answer.value === "1") score++;
+      }
+
+      const result = document.getElementById("result");
+      if (score === 5) {
+        result.innerHTML = "🌴 Perfekt! Du bist ein echter Maracwaologe!";
+        result.style.color = "#00aa00";
+      } else if (score >= 3) {
+        result.innerHTML = "🍊 Gut gemacht! Du hast solides Maracwa-Wissen – fast reif zur Ernte.";
+        result.style.color = "#ffaa00";
+      } else {
+        result.innerHTML = "🥭 Hm... du solltest wohl mehr Maracwa-Saft trinken!";
+        result.style.color = "#ff3300";
+      }
+    }
+  </script>
+</section>
 
   <footer>
     Kontakt: <a href="mailto:mimon@maracwa.com" style="color: white; text-decoration: underline;">mimon@maracwa.com</a>
